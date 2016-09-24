@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="自定义过渡" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="CcO-eT-TDu">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pO0-qZ-Qfz">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Transition"/>
+                                <connections>
+                                    <segue destination="z7B-Jg-sJD" kind="presentation" id="XpU-P2-eD8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CcO-eT-TDu" secondAttribute="trailing" id="3KZ-Iz-Waq"/>
+                            <constraint firstItem="CcO-eT-TDu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GSR-IL-fc7"/>
+                            <constraint firstItem="pO0-qZ-Qfz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XOG-LG-tRj"/>
+                            <constraint firstItem="pO0-qZ-Qfz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yes-AY-ZNS"/>
+                            <constraint firstItem="CcO-eT-TDu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="jIW-ms-oeP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CcO-eT-TDu" secondAttribute="bottom" id="r1b-op-kjK"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="CcO-eT-TDu"/>
+                                <exclude reference="pO0-qZ-Qfz"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="r1b-op-kjK"/>
+                                <exclude reference="XOG-LG-tRj"/>
+                                <exclude reference="Yes-AY-ZNS"/>
+                                <exclude reference="3KZ-Iz-Waq"/>
+                                <exclude reference="GSR-IL-fc7"/>
+                                <exclude reference="jIW-ms-oeP"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="CcO-eT-TDu"/>
+                                <include reference="pO0-qZ-Qfz"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="r1b-op-kjK"/>
+                                <include reference="XOG-LG-tRj"/>
+                                <include reference="Yes-AY-ZNS"/>
+                                <include reference="3KZ-Iz-Waq"/>
+                                <include reference="GSR-IL-fc7"/>
+                                <include reference="jIW-ms-oeP"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-162" y="148.5"/>
+        </scene>
+        <!--Message View Controller-->
+        <scene sceneID="9QE-Kl-aVY">
+            <objects>
+                <viewController id="z7B-Jg-sJD" customClass="MessageViewController" customModule="自定义过渡" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tQc-XX-mSe"/>
+                        <viewControllerLayoutGuide type="bottom" id="BuK-1r-iY5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YwQ-7c-s1s">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这就是自定义过渡之一" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqS-Pd-v8H">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMB-FN-DZC">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="close"/>
+                                <connections>
+                                    <action selector="dismissTouched:" destination="z7B-Jg-sJD" eventType="touchUpInside" id="xpa-xn-xkI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YqS-Pd-v8H" firstAttribute="centerX" secondItem="YwQ-7c-s1s" secondAttribute="centerX" id="BW0-nc-rGF"/>
+                            <constraint firstItem="SMB-FN-DZC" firstAttribute="top" secondItem="YqS-Pd-v8H" secondAttribute="bottom" constant="94" id="Nzn-ta-50y"/>
+                            <constraint firstItem="YqS-Pd-v8H" firstAttribute="centerY" secondItem="YwQ-7c-s1s" secondAttribute="centerY" id="Yox-yl-ICA"/>
+                            <constraint firstItem="SMB-FN-DZC" firstAttribute="centerX" secondItem="YwQ-7c-s1s" secondAttribute="centerX" id="ow1-ce-5Vr"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="YqS-Pd-v8H"/>
+                                <exclude reference="SMB-FN-DZC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Nzn-ta-50y"/>
+                                <exclude reference="ow1-ce-5Vr"/>
+                                <exclude reference="BW0-nc-rGF"/>
+                                <exclude reference="Yox-yl-ICA"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="YqS-Pd-v8H"/>
+                                <include reference="SMB-FN-DZC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Nzn-ta-50y"/>
+                                <include reference="ow1-ce-5Vr"/>
+                                <include reference="BW0-nc-rGF"/>
+                                <include reference="Yox-yl-ICA"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sb1-cF-fvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="721.5" y="190.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background.JPG" width="1515" height="1136"/>
+    </resources>
+</document>
